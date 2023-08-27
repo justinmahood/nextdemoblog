@@ -1,0 +1,13 @@
+{{ template "header.html.tmpl" .}}
+<div id=postlist>
+{{range .}}
+<div class=post>
+  <span class="posttitle"> <a href="/post/{{.Id}}">{{.Title}}</a></span>  <span class="postdate">{{.Date.Format "Jan 02, 2006"}}</span>
+  <div class="postauthor"> {{.Author}}</div>
+  <div class="postpreview"> {{ printf "%.200s" .Body}}...</div>
+</div>
+
+{{end}}
+</div>
+
+{{template "footer.html.tmpl"}}

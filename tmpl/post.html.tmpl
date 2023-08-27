@@ -1,0 +1,10 @@
+
+{{ template "header.html.tmpl" .}}
+<H1>{{.Title}}<H1>
+<H2>{{.Author}}<H2>
+<H3>{{.Date.Format "Jan 02, 2006"}}</H3>
+<p>
+{{.Body}}
+
+{{ template "footer.html.tmpl" .}}
+
