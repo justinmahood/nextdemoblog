@@ -1,3 +1,6 @@
 #! /bin/bash
-hey -c 100 -q 10 -z 5m https://nextdemoblog-ean27jt5ha-uc.a.run.app \
-& hey -c 100 -q 10 -z 5m https://justinsblog.web.app
+workers=100
+qps=15
+minutes=5m
+hey -c $workers -q $qps -z $minutes https://nextdemoblog-ean27jt5ha-uc.a.run.app \
+& hey -c $workers -q $qps -z $minutes https://justinsblog.web.app
