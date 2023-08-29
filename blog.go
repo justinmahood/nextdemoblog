@@ -38,7 +38,6 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	posts, _ := queryFirestorePosts(r.Context(), 10)
 	t.ExecuteTemplate(w, "index.html.tmpl", posts)
@@ -111,9 +110,9 @@ func getFirestorePost(ctx context.Context, id string) (*Post, error) {
 }
 
 func main() {
-	http.HandleFunc("/assets/", func(w http.ResponseWriter, r *http.Request){
-    http.ServeFile(w, r, fmt.Sprintf(".%s", r.URL.Path))
-  })
+	http.HandleFunc("/assets/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, fmt.Sprintf(".%s", r.URL.Path))
+	})
 
 	http.HandleFunc("/", requestHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
