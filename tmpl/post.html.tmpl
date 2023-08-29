@@ -1,10 +1,12 @@
 
 {{ template "header.html.tmpl" .}}
+<div class="post">
 <div class="posttitle">{{.Title}}</div>
 <div class="postauthor">{{.Author}}</div>
 <div class="postdate">{{.Date.Format "Jan 02, 2006"}}</div>
 <div class="postbody">
 {{.Body}}
+</div>
 </div>
 
 {{ template "footer.html.tmpl" .}}
