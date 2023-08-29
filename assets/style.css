@@ -1,2 +1,20 @@
 
-/* Base Styles */body {  font-family: Arial, sans-serif;  line-height: 1.5;  color: #333;  background-color: #fafafa;  margin: 0;  padding: 0;}a {  text-decoration: none;  transition: color 0.3s ease;}a, h1, .posttitle {  color: #4cd0d3;}a:hover {  color: turquoise;}/* Header Styles */#header {  background-color: white;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  padding: 1.5rem 10%;  display: flex;  justify-content: space-between;  align-items: center;}.sitetitle {  font-family: "Georgia", serif;  font-size: 3rem;  font-weight: bold;  color: #be4646 !important;}.menuitem {  margin-left: 1rem;  margin-right: 1rem;  color: #444;  font-size: 1rem;}/* Post List Styles */#postlist {  padding: 3rem 10%;}.post {  background-color: #ffffff;  margin-bottom: 2rem;  padding: 2rem;  border-radius: 5px;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);}/* Shared styles for .posttitle and h1 */.posttitle {  margin: 0;  font-family: "Georgia", serif;  font-size: 1.6rem;  font-weight: bold;}/* Shared styles for .postauthor and h2 */.postauthor, .postdate{  display: inline-block;  font-size: 1rem;  color: #666;  padding: 0;  font-size: .8rem;  padding-right: 20px;}.postauthor {  font-weight: bold;}.postbody, .postpreview {  margin-top: 1rem;}
+/* Base Styles */
+body {  font-family: Arial, sans-serif;  line-height: 1.5;  color: #333;  background-color: #fafafa;  margin: 0;  padding: 0;}
+a {  text-decoration: none;  transition: color 0.3s ease;}
+a, h1, .posttitle {  color: #4cd0d3;}
+a:hover {  color: turquoise;}
+/* Header Styles */
+#header {  background-color: white;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  padding: 1.5rem 10%;  display: flex;  justify-content: space-between;  align-items: center;}
+.sitetitle {  font-family: "Georgia", serif;  font-size: 3rem;  font-weight: bold;  color: #be4646 !important;}
+.menuitem {  margin-left: 1rem;  margin-right: 1rem;  color: #444;  font-size: 1rem;}
+/* Post List Styles */
+#postlist {  padding: 3rem 10%;}
+.post {  background-color: #ffffff;  margin-bottom: 2rem;  padding: 2rem;  border-radius: 5px;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);}
+/* Shared styles for .posttitle and h1 */
+.posttitle {  margin: 0;  font-family: "Georgia", serif;  font-size: 1.6rem;  font-weight: bold;}
+/* Shared styles for .postauthor and h2 */
+.postauthor, .postdate{  display: inline-block;  font-size: 1rem;  color: #666;  padding: 0;  font-size: .8rem;  padding-right: 20px;}
+.postauthor {  font-weight: bold;}
+.postbody, .postpreview {  margin-top: 1rem; white-space: pre-wrap;}
+

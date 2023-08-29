@@ -15,7 +15,7 @@ import (
 
 type Post struct {
 	Title  string    `firestore:"title" json:"title"`
-	Id     string    `firestore:ID", omitempty"`
+  Id     string    `firestore:ID", omitempty" json:"ID, omitempty"`
 	Author string    `firestore:"author" json:"author"`
 	Date   time.Time `firestore:"date" json:"date"`
 	Body   string    `firestore:"body" json:"body"`
