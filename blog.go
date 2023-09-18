@@ -79,7 +79,7 @@ func loadPosts() ([]*Post, error) {
 }
 
 func createFirestoreClient(ctx context.Context) *firestore.Client {
-	projectID := "jmahood-demo"
+	projectID := ""
 
 	client, err := firestore.NewClient(ctx, projectID)
 	if err != nil {
@@ -115,6 +115,7 @@ func main() {
     http.ServeFile(w, r, fmt.Sprintf(".%s", r.URL.Path))
   })
 
+	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/", requestHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
