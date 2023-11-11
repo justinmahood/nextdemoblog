@@ -38,7 +38,6 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	posts, _ := queryFirestorePosts(r.Context(), 10)
 	t.ExecuteTemplate(w, "index.html.tmpl", posts)
