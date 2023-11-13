@@ -112,7 +112,6 @@ func main() {
 	http.HandleFunc("/assets/", func(w http.ResponseWriter, r *http.Request){
     http.ServeFile(w, r, fmt.Sprintf(".%s", r.URL.Path))
   })
-
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/", requestHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
