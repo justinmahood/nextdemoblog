@@ -106,7 +106,6 @@ func getFirestorePost(ctx context.Context, id string) (*Post, error) {
 	doc, err := client.Collection("posts").Doc(id).Get(ctx)
 	doc.DataTo(&post)
 	return post, err
-
 }
 
 func main() {
