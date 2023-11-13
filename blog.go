@@ -22,7 +22,6 @@ type Post struct {
 }
 
 var t = template.Must(template.ParseGlob("./tmpl/*"))
-
 func requestHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("incoming request to ", r.URL.Path)
 	//w.Header().Set("Cache-Control", "public, max-age=10")
