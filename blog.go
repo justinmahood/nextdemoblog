@@ -22,7 +22,6 @@ type Post struct {
 }
 
 var t = template.Must(template.ParseGlob("./tmpl/*"))
-
 func requestHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("incoming request to ", r.URL.Path)
 	//w.Header().Set("Cache-Control", "public, max-age=10")
@@ -78,7 +77,7 @@ func loadPosts() ([]*Post, error) {
 }
 
 func createFirestoreClient(ctx context.Context) *firestore.Client {
-	projectID := "jmahood-demo"
+	projectID := ""
 
 	client, err := firestore.NewClient(ctx, projectID)
 	if err != nil {
@@ -106,7 +105,6 @@ func getFirestorePost(ctx context.Context, id string) (*Post, error) {
 	doc, err := client.Collection("posts").Doc(id).Get(ctx)
 	doc.DataTo(&post)
 	return post, err
-
 }
 
 func main() {
